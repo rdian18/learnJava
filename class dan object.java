@@ -1,0 +1,4 @@
+class mobil{
+    String warna;
+
+}
