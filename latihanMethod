@@ -1,0 +1,22 @@
+public class methodMhs {
+    private static long Id=1;
+ public static long simpanMhs(String nama,String alamat,String nik){
+     System.out.println("nama " +nama);
+     System.out.println("alamat " +alamat);
+     System.out.println("nik " +nik);
+
+     long id = Id++;
+     return  id;
+
+ }
+
+ public static void  deleteMhs(long id){
+     System.out.println("data mahasiswa berhasil di Delete");
+
+ }
+
+    public static void main(String[] args) {
+        long idMhs=simpanMhs("Aldo","Bekasi","000010101");
+        deleteMhs(idMhs);
+    }
+}
