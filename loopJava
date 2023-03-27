@@ -1,0 +1,77 @@
+import java.util.Scanner;
+
+public class loopCondition {
+    public static void main(String[] args) {
+       // forBilGenap();
+        //tentukanBilangan();
+        //bilPrima();
+        tentukanPrima();
+    }
+    static void forBilGenap(){
+        Scanner angka = new Scanner(System.in);
+        System.out.println("Masukan angka ");
+        int bil = angka.nextInt();
+
+        for (int i = 1;i <= bil;i++){
+            if(i % 2 == 0){
+                System.out.print(i+" ");
+
+            }
+        }
+        angka.close();
+
+    }
+
+    static void tentukanBilangan(){
+        Scanner bil = new Scanner(System.in);
+        System.out.println("Masukan angka :");
+        int angka =  bil.nextInt();
+
+        if(angka % 2 == 0){
+            System.out.println("Bilangang Genap");
+        }else{
+            System.out.println("Bilangan Ganjil");
+        }
+    }
+
+    static void  bilPrima(){
+        Scanner  prime = new Scanner(System.in);
+        System.out.println("Masukan bilangan prima :");
+        int bil = prime.nextInt();
+
+     boolean prima = true;
+     for(int i = 2; i <= bil/2 ;i++){
+         if(bil %2 == 0){
+             prima = false;
+             break;
+         }
+     }
+     if(prima){
+         System.out.println(bil +" adalah Bilangan prima");
+     }else{
+         System.out.println(bil +" adalah Bukan Bilangan prima");
+     }
+     prime.close();
+    }
+
+    static void  tentukanPrima() {
+        Scanner prime = new Scanner(System.in);
+        System.out.println("Masukan bilangan prima :");
+        int bil = prime.nextInt();
+
+        boolean prima = true;
+        for (int i =2;i< bil;i++){
+            for (int j = 2;j<i/2;j++){
+                if(i%j==0){
+                    prima=false;
+                    break;
+                }
+            }
+            if(prima){
+                System.out.println(i+" ");
+            }
+        }
+    }
+
+
+    }
